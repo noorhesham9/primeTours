@@ -1,0 +1,81 @@
+.containerrrrrstats {
+  background-color: #008080;
+  color: #ffd700;
+  text-align: center;
+  padding: 50px;
+  font-family: sans-serif;
+  @media (max-width: 500px) {
+    padding: 0;
+  }
+}
+
+.info-section {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  width: 150px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.number {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.label {
+  font-size: 0.9em;
+}
+.review-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 0;
+  @media (max-width: 989px) {
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 30px;
+    /* min-height: 140px; */
+  }
+}
+
+.review-section p {
+  text-align: left;
+  width: 80%;
+  max-width: 800px;
+  font-family: "Playfair Display SC";
+  font-weight: 400;
+  font-size: 30px;
+
+  @media (max-width: 989px) {
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.submit-button {
+  background-color: #ffd700;
+  color: #008080;
+  border: none;
+  padding: 18px 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submit-button:hover {
+  background-color: #e6c500;
+}

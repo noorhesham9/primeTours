@@ -1,0 +1,171 @@
+.heading {
+  margin: 0 auto 50px auto;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  .yellow {
+    margin: 0 0 40px 0;
+    h4 {
+      font-size: 67.68px;
+      margin-bottom: 0.3em;
+      font-weight: 400;
+    }
+    p {
+      font-size: 39.6px;
+      font-weight: 400;
+      margin-bottom: 0.3em;
+    }
+    color: rgb(229, 163, 0);
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+  }
+  .bblack {
+    color: rgb(8, 55, 77);
+    text-align: center;
+    font-weight: 400;
+    font-size: 19.04px;
+    margin-bottom: 0.3em;
+    font-family: "Playfair Display", serif;
+  }
+  @media (max-width: 768px) {
+    .yellow {
+      h4 {
+        font-size: 39.12px;
+      }
+      p {
+        font-size: 25.04px;
+      }
+    }
+  }
+  @media (max-width: 340px) {
+    .yellow {
+      h4 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+    .bblack {
+      font-size: 16px;
+    }
+  }
+}
+
+.contain {
+  font-family: "Playfair Display", serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 50px 0;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    margin: 20px 0;
+    width: 260px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    box-shadow: 2px 1px 11px #0000005c;
+    @media (max-width: 350px) {
+      padding: 20px 0;
+    }
+    .MuiBox-root {
+      @media (max-width: 350px) {
+        padding: 10px 10px;
+      }
+    }
+    .badge {
+      position: absolute;
+      top: 6px;
+      right: -27px;
+      width: 80px;
+      height: 20px;
+      transform: rotate(45deg);
+      background: #e6a204;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .plan-level {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 15px 0;
+      font-family: "Playfair Display", serif;
+      text-transform: uppercase;
+    }
+    .price {
+      font-size: 47px;
+      color: #087083;
+      margin: 10px 0;
+      font-family: "Playfair Display", serif;
+      @media (max-width: 350px) {
+        font-size: 47px;
+      }
+    }
+    .titleee {
+      margin: 20px 0;
+      font-size: 13px;
+      font-weight: 600;
+      color: #087083;
+      font-family: "Open Sans", serif;
+
+      /* font-family: "Playfair Display", serif; */
+    }
+    .features-list {
+      padding: 0;
+      margin: 30px 0;
+      li {
+        font-size: 13px;
+        color: black;
+        margin-bottom: 20px;
+        font-family: "Open Sans", serif;
+        list-style: none;
+      }
+    }
+    .buy-now {
+      width: 100%;
+      margin-top: 20px;
+      padding: 15px 0;
+      background: #cca300;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      @media (max-width: 350px) {
+        /* padding: 10px 10px; */
+        width: calc(100% - 20px);
+        margin: 20px auto 0;
+      }
+    }
+  }
+}
+
+.banner-text {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+}
+
+.book-now-button {
+  background-color: #fff;
+  color: black;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-weight: 400;
+  font-size: 15px;
+  cursor: pointer;
+}
