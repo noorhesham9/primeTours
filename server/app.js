@@ -14,7 +14,7 @@ app.use(cookiesMiddleware());
 app.use(express.static("./public"));
 app.use(
   cors({
-    origin: "https://primetours.netlify.app/",
+    origin: "https://primetours.netlify.app",
     credentials: true,
     withCredentials: true,
   })
