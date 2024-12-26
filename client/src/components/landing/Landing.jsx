@@ -8,29 +8,48 @@ import "./landing.css";
 import { Parallax, Autoplay, Navigation, Pagination } from "swiper/modules";
 import { useRef } from "react";
 
-const data = [
-  {
-    id: 1,
-    title: "Our tours are tailored to meet your needs ",
-    desc: "Our tours are tailored to meet your needs ",
-    image: "/images/landing1.jpg",
-  },
-  {
-    id: 2,
+function Landing({ lang, t }) {
+  let data = [];
+  if (lang === "en") {
+    data = [
+      {
+        id: 1,
+        title: "Our tours are tailored to meet your needs ",
+        image: "/images/landing1.jpg",
+      },
+      {
+        id: 2,
 
-    title: "Welcome to Georgia, the land of beauty ",
-    desc: "Subtitle 2",
-    image: "/images/landing2.jpg",
-  },
-  {
-    id: 3,
+        title: "Welcome to Georgia, the land of beauty ",
+        image: "/images/landing2.jpg",
+      },
+      {
+        id: 3,
+        title: "We provide the finest travel experiences",
+        image: "/images/landing3.jpg",
+      },
+    ];
+  } else if (lang === "ar") {
+    data = [
+      {
+        id: 1,
+        title: "مرحبًا بكم في جورجيا، أرض الجمال",
+        image: "/images/landing1.jpg",
+      },
+      {
+        id: 2,
 
-    title: "We provide the finest travel experiences ",
-    desc: "Subtitle 3",
-    image: "/images/landing3.jpg",
-  },
-];
-function Landing() {
+        title: "نوفر لكم أفضل التجارب السياحية ",
+        image: "/images/landing2.jpg",
+      },
+      {
+        id: 3,
+        title: "رحلاتنا معدّة خصيصًا لتلبية احتياجاتكم واستمتاعكم ",
+        image: "/images/landing3.jpg",
+      },
+    ];
+  }
+
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {
@@ -130,7 +149,9 @@ function Landing() {
                       {d.title}
                     </div>
                     <div className="buttonwrapper">
-                      <button className="bookNow">Book Now</button>
+                      <a href="#pricing" className="bookNow">
+                        {t("buttonLanding")}
+                      </a>
                     </div>
                   </div>
                 </SwiperSlide>

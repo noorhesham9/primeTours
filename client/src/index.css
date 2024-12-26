@@ -2,7 +2,9 @@ body {
   margin: 0;
   background: rgb(242, 251, 255);
 }
-
+html {
+  scroll-behavior: smooth; /* 1 */
+}
 ul {
   list-style: none;
 }
@@ -23,7 +25,11 @@ button::-moz-focus-inner,
   border-style: none;
   padding: 0;
 }
-
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 button {
   border: 0;
 }

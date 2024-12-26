@@ -58,7 +58,7 @@ nav {
   align-items: center;
   background-color: rgb(16, 129, 147);
 
-  button {
+  .closeIcon {
     align-self: flex-end;
     margin: 35px 45px 0 0;
     outline: none;
@@ -66,7 +66,7 @@ nav {
     background-color: transparent;
     text-transform: uppercase;
     font-family: inherit;
-    font-size: 13px;
+    font-size: 38px;
     color: white;
   }
 

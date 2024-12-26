@@ -9,6 +9,8 @@ import { useEffect, useState } from "react";
 import "./header.css";
 import { motion } from "framer-motion";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router";
+import { faUserTie } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 const MOBILE_NAV_ITEMS = [
   {
@@ -19,21 +21,43 @@ const MOBILE_NAV_ITEMS = [
   {
     id: 1,
     navTitle: "تواصل معنا",
-    link: "#contacts",
+    link: "#caontactUs",
   },
-  {
-    id: 2,
-    navTitle: "privacy policy",
-    link: "#privacyPolicy",
-  },
+  // {
+  //   id: 2,
+  //   navTitle: "privacy policy",
+  //   link: "#privacyPolicy",
+  // },
 ];
 
-function Header() {
+// eslint-disable-next-line react/prop-types
+function Header({ t, lang, i18n, setlang, sectionn }) {
+  console.log(sectionn, setlang);
+  let navigate = useNavigate();
+  const [langEnglish, setLangEnglish] = useState(lang === "en");
+
+  const changeLang = () => {
+    // eslint-disable-next-line react/prop-types
+    i18n.changeLanguage(langEnglish ? "ar" : "en");
+    setlang();
+    setLangEnglish(!langEnglish);
+  };
+
   const [top, settop] = useState(true);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [isMopile, setISMopile] = useState(null);
   useEffect(() => {
-    console.log(window.innerWidth);
+    if (mobileNavOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [mobileNavOpen]);
+
+  useEffect(() => {
+    if (sectionn) {
+      settop(false);
+    }
     if (window.innerWidth > 990) {
       setISMopile(false);
     } else {
@@ -125,7 +149,7 @@ function Header() {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 80) {
         settop(false);
-      } else {
+      } else if (window.scrollY <= 80 && !sectionn) {
         settop(true);
       }
     });
@@ -134,7 +158,8 @@ function Header() {
   return (
     <Box
       sx={{
-        zIndex: "50",
+        zIndex: "1000",
+
         transition: "ease-in-out 0.4s",
         position: "fixed",
         top: 0,
@@ -162,7 +187,12 @@ function Header() {
           }}
         >
           {!isMopile && (
-            <Box sx={{}}>
+            <Box
+              onClick={() => {
+                location.href = "#";
+                navigate("/");
+              }}
+            >
               <img
                 className="img-loaded"
                 style={{
@@ -172,7 +202,7 @@ function Header() {
                   borderRadius: "5px",
                   objectFit: "contain",
                 }}
-                src="images/logo.png"
+                src="/images/logo.png"
                 alt=""
               />
             </Box>
@@ -192,13 +222,61 @@ function Header() {
                 fontFamily: "Noto Kufi Arabic, sans-serif",
               }}
             >
-              <div>الفنادق</div>
-              <div>تواصل معنا</div>
-              <div>privacy policy</div>
-              <FontAwesomeIcon icon={faFacebookF} />
-              <FontAwesomeIcon icon={faTiktok} />
-              <FontAwesomeIcon icon={faSnapchat} />
-              <FontAwesomeIcon icon={faInstagram} />
+              <a href="#hotels">الفنادق</a>
+              <a href="#caontactUs">تواصل معنا</a>
+              {/* <a>privacy policy</a> */}
+              <button
+                onClick={changeLang}
+                style={{
+                  margin: "0 auto ",
+                  width: "40px",
+                  height: "40px",
+                  // fontSize: "14px",
+                  fontWeight: 500,
+                  cursor: "pointer",
+
+                  letterSpacing: "1px",
+                  color: "black",
+                  borderRadius: "50%",
+                  backgroundColor: "transparent",
+                  border: "1px solid black",
+                }}
+              >
+                {langEnglish ? "AR" : "EN"}
+              </button>
+
+              <button
+                onClick={() => navigate("/admin")}
+                style={{
+                  cursor: "pointer",
+                  margin: "0 auto ",
+                  width: "40px",
+                  height: "40px",
+                  // fontSize: "14px",
+                  fontWeight: 500,
+                  letterSpacing: "1px",
+                  color: "black",
+                  borderRadius: "50%",
+                  backgroundColor: "transparent",
+                  border: "1px solid black",
+                }}
+              >
+                {/* {langEnglish ? "AR" : "EN"} */}
+                <FontAwesomeIcon icon={faUserTie} />
+              </button>
+
+              <a href="https://web.facebook.com/profile.php?id=61567784657445&mibextid=LQQJ4d&_rdc=1&_rdr#">
+                <FontAwesomeIcon icon={faFacebookF} />
+              </a>
+              <a href="https://www.tiktok.com/@prime__tours?_t=8r8yNa9LDJU&_r=1">
+                <FontAwesomeIcon icon={faTiktok} />
+              </a>
+              <a href="https://www.snapchat.com/add/prime_tours?share_id=cr_6pmIk1S0&locale=en-GB">
+                <FontAwesomeIcon icon={faSnapchat} />
+              </a>
+              <a href="https://www.instagram.com/prime__tours?igsh=MTV1ajVoanRwMWYzYw%3D%3D&utm_source=qr">
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
             </Box>
           ) : (
             <motion.nav
@@ -208,7 +286,12 @@ function Header() {
             >
               <div className="logo-container">
                 <motion.div variants={hideNavItemsVariant}>
-                  <Box sx={{}}>
+                  <Box
+                    onClick={() => {
+                      location.href = "#";
+                      navigate("/");
+                    }}
+                  >
                     <img
                       className="img-loaded"
                       style={{
@@ -218,7 +301,7 @@ function Header() {
                         borderRadius: "5px",
                         objectFit: "contain",
                       }}
-                      src="images/logo.png"
+                      src="/images/logo.png"
                       alt=""
                     />
                   </Box>
@@ -238,7 +321,7 @@ function Header() {
               </div>
               <motion.div variants={mobileMenuVariant} className="mobile-menu">
                 <motion.button
-                  className="openIcon"
+                  className="closeIcon"
                   variants={fadeInVariant}
                   onClick={() => setMobileNavOpen(false)}
                 >
@@ -258,11 +341,40 @@ function Header() {
                       </motion.a>
                     </motion.li>
                   ))}
+                  <motion.li variants={liVariant}>
+                    <motion.button
+                      variants={liVariant}
+                      onClick={changeLang}
+                      style={{
+                        margin: "0 auto ",
+                        width: "40px",
+                        height: "40px",
+                        // fontSize: "14px",
+                        fontWeight: 500,
+                        letterSpacing: "1px",
+                        color: "white",
+                        borderRadius: "50%",
+                        backgroundColor: "transparent",
+                        border: "1px solid white",
+                      }}
+                    >
+                      {langEnglish ? "AR" : "EN"}
+                    </motion.button>
+                  </motion.li>
+
                   <motion.div variants={fadeInVariant} className="Links">
-                    <FontAwesomeIcon icon={faFacebookF} />
-                    <FontAwesomeIcon icon={faTiktok} />
-                    <FontAwesomeIcon icon={faSnapchat} />
-                    <FontAwesomeIcon icon={faInstagram} />
+                    <a href="https://web.facebook.com/profile.php?id=61567784657445&mibextid=LQQJ4d&_rdc=1&_rdr#">
+                      <FontAwesomeIcon icon={faFacebookF} />
+                    </a>
+                    <a href="https://www.tiktok.com/@prime__tours?_t=8r8yNa9LDJU&_r=1">
+                      <FontAwesomeIcon icon={faTiktok} />
+                    </a>
+                    <a href="https://www.snapchat.com/add/prime_tours?share_id=cr_6pmIk1S0&locale=en-GB">
+                      <FontAwesomeIcon icon={faSnapchat} />
+                    </a>
+                    <a href="https://www.instagram.com/prime__tours?igsh=MTV1ajVoanRwMWYzYw%3D%3D&utm_source=qr">
+                      <FontAwesomeIcon icon={faInstagram} />
+                    </a>
                   </motion.div>
                 </motion.ul>
               </motion.div>
