@@ -23,7 +23,7 @@ function App() {
   const [lang, setlang] = useCycle("en", "ar");
   const { t, i18n } = useTranslation();
   axios.defaults.withCredentials = true;
-  axios.defaults.baseURL = "http://localhost:3002";
+  axios.defaults.baseURL = "https://prime-tours.vercel.app/";
   const [top, settop] = useState(true);
   const scrollToTop = () => {
     window.scrollTo({
