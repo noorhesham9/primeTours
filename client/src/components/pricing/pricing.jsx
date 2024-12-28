@@ -11,6 +11,16 @@ function pricing({ t, lang }) {
     data1 = [
       {
         id: "01",
+        title: "5Days - 4Nights - 700$",
+        price: "700",
+        details: [
+          "2 tbilisi (tbilisi tour - caucas mountains)",
+          "2 bakuriani (borjomi botenical garden and borjomi tour + bakurian ski resort and bakuriani tour )",
+        ],
+        navigate: "/program/program4",
+      },
+      {
+        id: "02",
         title: "6days - Start : 800$",
         price: "800",
         details: [
@@ -24,7 +34,20 @@ function pricing({ t, lang }) {
         navigate: "/program/program1",
       },
       {
-        id: "02",
+        id: "03",
+        title: " 7Days - 6Nights - 1000$",
+        price: "1000",
+        details: [
+          "2 tbilisi (tbilisi tour - caucas mountains)",
+          "2 bakuriani (borjomi botenical garden and borjomi tour + bakurian ski resort and bakuriani tour )",
+          "2 Batumi ( batumi botenical garden and batumi tour - Makhunseti tour )",
+        ],
+        navigate: "/program/program5",
+      },
+    ];
+    data2 = [
+      {
+        id: "04",
         title: "8days - Start : 1150$",
         price: "1150",
         details: [
@@ -40,7 +63,18 @@ function pricing({ t, lang }) {
         navigate: "/program/program2",
       },
       {
-        id: "03",
+        id: "05",
+        title: "9Days - 8Nights - 1250$",
+        price: "1250",
+        details: [
+          "3 tbilisi (tbilisi tour - caucas mountains tour - dashbashi bridge tour )",
+          "2 bakuriani (borjomi botenical garden and borjomi tour + bakurian ski resort and bakuriani tour )",
+          "2 Batumi ( batumi botenical garden and batumi tour - Makhunseti tour - free day for shopping)",
+        ],
+        navigate: "/program/program6",
+      },
+      {
+        id: "06",
         title: " 9days -  Start:1450$ + 1day free",
         price: "1450",
         details: [
@@ -57,44 +91,20 @@ function pricing({ t, lang }) {
         navigate: "/program/program3",
       },
     ];
-    data2 = [
-      {
-        id: "04",
-        title: "5Days - 4Nights - 700$",
-        price: "700",
-        details: [
-          "2 tbilisi (tbilisi tour - caucas mountains)",
-          "2 bakuriani (borjomi botenical garden and borjomi tour + bakurian ski resort and bakuriani tour )",
-        ],
-        navigate: "/program/program4",
-      },
-      {
-        id: "05",
-        title: " 7Days - 6Nights - 1000$",
-        price: "1000",
-        details: [
-          "2 tbilisi (tbilisi tour - caucas mountains)",
-          "2 bakuriani (borjomi botenical garden and borjomi tour + bakurian ski resort and bakuriani tour )",
-          "2 Batumi ( batumi botenical garden and batumi tour - Makhunseti tour )",
-        ],
-        navigate: "/program/program5",
-      },
-      {
-        id: "06",
-        title: "9Days - 8Nights - 1250$",
-        price: "1250",
-        details: [
-          "3 tbilisi (tbilisi tour - caucas mountains tour - dashbashi bridge tour )",
-          "2 bakuriani (borjomi botenical garden and borjomi tour + bakurian ski resort and bakuriani tour )",
-          "2 Batumi ( batumi botenical garden and batumi tour - Makhunseti tour - free day for shopping)",
-        ],
-        navigate: "/program/program6",
-      },
-    ];
   } else if (lang === "ar") {
     data1 = [
       {
         id: "01",
+        title: "5 ايام 4 ليالي- 700 دولار",
+        price: "700",
+        details: [
+          "2 تبليسي (جولة تبليسي - جبال القوقاز)",
+          "2 باكورياني (حديقة بورجومي النباتية وجولة بورجومي  + منتجع باكوريان للتزلج وجولة باكورياني) )",
+        ],
+        navigate: "/program/program4",
+      },
+      {
+        id: "02",
         title: "6 ايام - تبدأ : 800 دولار",
         price: "800",
         details: [
@@ -108,7 +118,20 @@ function pricing({ t, lang }) {
         navigate: "/program/program1",
       },
       {
-        id: "02",
+        id: "03",
+        title: "7 ايام 6 ليالي - 1000 دولار",
+        price: "1000",
+        details: [
+          "2 تبليسي (جولة تبليسي - جبال القوقاز)",
+          "2 باكورياني (حديقة بورجومي النباتية وجولة بورجومي  + منتجع باكوريان للتزلج وجولة باكورياني) )",
+          "2 باتومي (حديقة باتومي النباتية وجولة باتومي - جولة ماخونسيتي)",
+        ],
+        navigate: "/program/program5",
+      },
+    ];
+    data2 = [
+      {
+        id: "04",
         title: "8 ايام تبدأ : 1150 دولار",
         price: "1150",
         details: [
@@ -124,7 +147,18 @@ function pricing({ t, lang }) {
         navigate: "/program/program2",
       },
       {
-        id: "03",
+        id: "05",
+        title: "9 ايام 8 ليالي - 1250 دولار",
+        price: "1250",
+        details: [
+          "3 تبليسي (جولة تبليسي - جولة جبال القوقاز - جولة جسر داشباشي)",
+          "2 باكورياني (حديقة بورجومي النباتية وجولة بورجومي  + منتجع باكوريان للتزلج وجولة باكورياني) )",
+          "3 باتومي (حديقة باتومي النباتية وجولة باتومي - جولة ماخونسيتي - يوم حر للتسوق)",
+        ],
+        navigate: "/program/program6",
+      },
+      {
+        id: "06",
         title: "9 ايام - تبدأ : 1450 دولار + 1 يوم مجانا",
         price: "1450",
         details: [
@@ -139,40 +173,6 @@ function pricing({ t, lang }) {
           "اليوم التاسع: يوم حر في تبليسي",
         ],
         navigate: "/program/program3",
-      },
-    ];
-    data2 = [
-      {
-        id: "04",
-        title: "5 ايام 4 ليالي- 700 دولار",
-        price: "700",
-        details: [
-          "2 تبليسي (جولة تبليسي - جبال القوقاز)",
-          "2 باكورياني (حديقة بورجومي النباتية وجولة بورجومي  + منتجع باكوريان للتزلج وجولة باكورياني) )",
-        ],
-        navigate: "/program/program4",
-      },
-      {
-        id: "05",
-        title: "7 ايام 6 ليالي - 1000 دولار",
-        price: "1000",
-        details: [
-          "2 تبليسي (جولة تبليسي - جبال القوقاز)",
-          "2 باكورياني (حديقة بورجومي النباتية وجولة بورجومي  + منتجع باكوريان للتزلج وجولة باكورياني) )",
-          "2 باتومي (حديقة باتومي النباتية وجولة باتومي - جولة ماخونسيتي)",
-        ],
-        navigate: "/program/program5",
-      },
-      {
-        id: "06",
-        title: "9 ايام 8 ليالي - 1250 دولار",
-        price: "1250",
-        details: [
-          "3 تبليسي (جولة تبليسي - جولة جبال القوقاز - جولة جسر داشباشي)",
-          "2 باكورياني (حديقة بورجومي النباتية وجولة بورجومي  + منتجع باكوريان للتزلج وجولة باكورياني) )",
-          "3 باتومي (حديقة باتومي النباتية وجولة باتومي - جولة ماخونسيتي - يوم حر للتسوق)",
-        ],
-        navigate: "/program/program6",
       },
     ];
   }
@@ -275,7 +275,7 @@ function pricing({ t, lang }) {
                 }}
                 className="buy-now"
               >
-                BUY NOW
+                {lang === "en" ? "Book Now" : " احجز الان"}
               </button>
             </motion.div>
           ))}
@@ -340,7 +340,7 @@ function pricing({ t, lang }) {
                 }}
                 className="buy-now"
               >
-                {lang === "en" ? "Buy Now" : "اشتر الان"}
+                {lang === "en" ? "Book Now" : " احجز الان"}
               </button>
             </motion.div>
           ))}

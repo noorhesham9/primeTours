@@ -134,7 +134,7 @@ function program3({ lang }) {
             marginTop: "40px",
           }}
         >
-          برنامج 6 ايام
+          {lang === "en" ? "9 Days program" : "برنامج 9 ايام"}
         </Typography>
         <div
           className="cccccc"

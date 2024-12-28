@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import axios from "axios";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
+import Cookies from "js-cookie";
 function login({ setToken }) {
   const initialValues = {
     email: "",
@@ -21,6 +22,7 @@ function login({ setToken }) {
       .then((response) => {
         console.log(response.data);
         setToken(response.data.token);
+        Cookies.set("jwt", response.data.token);
       })
       .catch((error) => {
         console.log(error.message);
