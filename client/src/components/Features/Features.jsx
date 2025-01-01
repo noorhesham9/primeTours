@@ -10,14 +10,19 @@ const Features = ({ t }) => {
     <div
       className="sky-container"
       style={{
-        backgroundImage: `url(/images/skyImage.jpg)`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        // backgroundImage: `url(/images/skyImage.jpg)`,
+        // backgroundSize: "cover",
+        // backgroundPosition: "center",
         color: "white",
         fontFamily: "Arial, sans-serif",
         position: "relative",
       }}
     >
+      <video autoPlay loop muted>
+        <source src="/videos/1231.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
       <div className="contentt">
         <AnimatePresence>
           <motion.div
