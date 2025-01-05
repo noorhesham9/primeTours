@@ -218,7 +218,7 @@ function ContactUs({ t, lang }) {
             <Typography
               onClick={() => {
                 location.href =
-                  "https://web.whatsapp.com/send?autoload=1&app_absent=0&phone=995555555640&text";
+                  "https://api.whatsapp.com/send?phone=995555555640";
               }}
               sx={{
                 textDecoration: "underline",

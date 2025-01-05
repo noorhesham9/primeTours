@@ -271,7 +271,7 @@ function pricing({ t, lang }) {
               <button
                 onClick={() => {
                   location.href =
-                    "https://web.whatsapp.com/send?autoload=1&app_absent=0&phone=995555555640&text";
+                    "https://api.whatsapp.com/send?phone=995555555640";
                 }}
                 className="buy-now"
               >
@@ -336,7 +336,7 @@ function pricing({ t, lang }) {
               <button
                 onClick={() => {
                   location.href =
-                    "https://web.whatsapp.com/send?autoload=1&app_absent=0&phone=995555555640&text";
+                    "https://api.whatsapp.com/send?phone=995555555640";
                 }}
                 className="buy-now"
               >
@@ -363,7 +363,7 @@ function pricing({ t, lang }) {
           <button
             onClick={() => {
               location.href =
-                "https://web.whatsapp.com/send?autoload=1&app_absent=0&phone=995555555640&text";
+                "https://api.whatsapp.com/send?phone=995555555640";
             }}
             className="book-now-button"
           >
