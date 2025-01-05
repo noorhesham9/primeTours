@@ -271,7 +271,7 @@ function pricing({ t, lang }) {
               <button
                 onClick={() => {
                   location.href =
-                    "https://api.whatsapp.com/message/IPP6NE4DHZDKN1?autoload=1&app_absent=0";
+                    "https://web.whatsapp.com/send?autoload=1&app_absent=0&phone=995555555640&text";
                 }}
                 className="buy-now"
               >
@@ -336,7 +336,7 @@ function pricing({ t, lang }) {
               <button
                 onClick={() => {
                   location.href =
-                    "https://api.whatsapp.com/message/IPP6NE4DHZDKN1?autoload=1&app_absent=0";
+                    "https://web.whatsapp.com/send?autoload=1&app_absent=0&phone=995555555640&text";
                 }}
                 className="buy-now"
               >
@@ -363,7 +363,7 @@ function pricing({ t, lang }) {
           <button
             onClick={() => {
               location.href =
-                "https://api.whatsapp.com/message/IPP6NE4DHZDKN1?autoload=1&app_absent=0";
+                "https://web.whatsapp.com/send?autoload=1&app_absent=0&phone=995555555640&text";
             }}
             className="book-now-button"
           >
