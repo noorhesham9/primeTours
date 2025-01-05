@@ -156,7 +156,7 @@ function Hotels({ t, lang }) {
               viewport={{ once: true }}
             >
               <div className="image-container">
-                <img src={d.img} alt={d.name} />
+                <img loading="lazy" src={d.img} alt={d.name} />
               </div>
               <div className="contenthotel">
                 <h2>{d.name}</h2>

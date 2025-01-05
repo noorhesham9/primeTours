@@ -195,6 +195,7 @@ function Header({ t, lang, i18n, setlang, sectionn }) {
             >
               <img
                 className="img-loaded"
+                loading="lazy"
                 style={{
                   transition: "ease-in-out 0.4s",
 
@@ -294,6 +295,7 @@ function Header({ t, lang, i18n, setlang, sectionn }) {
                   >
                     <img
                       className="img-loaded"
+                      loading="lazy"
                       style={{
                         transition: "ease-in-out 0.4s",
 
